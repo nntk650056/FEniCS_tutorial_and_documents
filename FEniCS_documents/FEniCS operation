@@ -1,0 +1,70 @@
+
+service docker start
+docker run -ti quay.io/fenicsproject/stable:latest
+docker run -ti -p 127.0.0.1:8000:8000 -v $(pwd):/home/fenics/shared -w /home/fenics/shared quay.io/fenicsproject/stable:current
+
+
+docker cp 08ca81a2e63d:/home/fenics/demo/python/documented/hyperelasticity_Mooney-Rivlin /home/zxy/
+
+docker cp /home/zxy/桌面/demo_hyperelasticity01.py 08ca81a2e63d:/demo/python/documented/hyperelasticity
+
+python3 demo_elasticity.py 
+
+paraview
+
+mkdir ~/demo/python/documented/hyperelasticity_Mooney-Rivlin
+
+chmod -R 777 zxy/fenics/demo/python/
+
+PYBIND11_VERSION=2.2.3
+wget -nc --quiet https://github.com/pybind/pybind11/archive/v${PYBIND11_VERSION}.tar.gz
+tar -xf v${PYBIND11_VERSION}.tar.gz && cd pybind11-${PYBIND11_VERSION}
+mkdir build && cd build && cmake -DPYBIND11_TEST=off .. && make install
+wget -nc --quiet https://bitbucket.org/fenics-project/mshr/downloads/mshr-2019.1.0.tar.gz
+
+git clone https://bitbucket.org/fenics-project/fiat 
+git clone https://bitbucket.org/fenics-project/instant 
+git clone https://bitbucket.org/fenics-project/dijitso 
+git clone https://bitbucket.org/fenics-project/ufl 
+git clone https://bitbucket.org/fenics-project/ffc 
+git clone https://bitbucket.org/fenics-project/dolfin 
+git clone https://bitbucket.org/fenics-project/mshr 
+cd fiat && pip3 install . && cd ..
+cd instant && pip3 install . && cd ..
+cd dijitso && pip3 install . && cd ..
+cd ufl && pip3 install . && cd ..
+cd ffc && pip3 install . && cd ..
+cd dolfin && mkdir build && cd build && cmake .. && make install 
+cd mshr && mkdir build && cd build && cmake .. && make install 	
+
+
+conda create -n fenicsproject -c conda-forge python=3.7 fenics
+source activate fenicsproject
+
+conda create -n fenicsproject -c conda-forge python=3.7 jupyter fenics
+
+git clone https://bitbucket.org/fenics-project/fiat
+git clone https://bitbucket.org/fenics-project/dijitso
+git clone https://bitbucket.org/fenics-project/ufl
+git clone https://bitbucket.org/fenics-project/ffc
+git clone https://bitbucket.org/fenics-project/dolfin
+git clone https://bitbucket.org/fenics-project/mshr
+cd fiat    && pip install . && cd ..
+cd dijitso && pip install . && cd ..
+cd ufl     && pip install . && cd ..
+cd ffc     && pip install . && cd ..
+mkdir dolfin/build && cd dolfin/build && cmake .. && make install && cd ../..
+mkdir mshr/build   && cd mshr/build   && cmake .. && make install && cd ../..
+cd dolfin/python && pip install . && cd ../..
+cd mshr/python   && pip install . && cd ../..
+
+
+
+git clone --branch=$FENICS_VERSION https://bitbucket.org/fenics-project/dolfin
+git clone --branch=$FENICS_VERSION https://bitbucket.org/fenics-project/mshr
+mkdir dolfin/build && cd dolfin/build && cmake .. && make install && cd ../..
+mkdir mshr/build   && cd mshr/build   && cmake .. && make install && cd ../..
+cd dolfin/python && pip3 install . && cd ../..
+mkdir mshr/build   && cd mshr/build   && cmake .. && make install && cd ../..
+cd mshr/python   && pip3 install . && cd ../..
+

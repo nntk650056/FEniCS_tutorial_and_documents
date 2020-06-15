@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<VTKFile type="Collection" version="0.1">
+  <Collection>
+    <DataSet timestep="0.30000000000000004" part="0" file="chemical_potential000000.vtu" />
+    <DataSet timestep="0.70000000000000007" part="0" file="chemical_potential000001.vtu" />
+    <DataSet timestep="1.5" part="0" file="chemical_potential000002.vtu" />
+    <DataSet timestep="3.1000000000000001" part="0" file="chemical_potential000003.vtu" />
+    <DataSet timestep="4.0999999999999996" part="0" file="chemical_potential000004.vtu" />
+    <DataSet timestep="5.0999999999999996" part="0" file="chemical_potential000005.vtu" />
+    <DataSet timestep="6.0999999999999996" part="0" file="chemical_potential000006.vtu" />
+    <DataSet timestep="7.0999999999999996" part="0" file="chemical_potential000007.vtu" />
+    <DataSet timestep="8.0999999999999996" part="0" file="chemical_potential000008.vtu" />
+    <DataSet timestep="9.0999999999999996" part="0" file="chemical_potential000009.vtu" />
+    <DataSet timestep="10.1" part="0" file="chemical_potential000010.vtu" />
+    <DataSet timestep="11.1" part="0" file="chemical_potential000011.vtu" />
+    <DataSet timestep="12.1" part="0" file="chemical_potential000012.vtu" />
+    <DataSet timestep="13.1" part="0" file="chemical_potential000013.vtu" />
+    <DataSet timestep="14.1" part="0" file="chemical_potential000014.vtu" />
+    <DataSet timestep="15.1" part="0" file="chemical_potential000015.vtu" />
+  </Collection>
+</VTKFile>
