@@ -8,15 +8,23 @@
 - [Generate_mesh_XML]： 生成.xml格式网格文件的python程序
 - [python_programs]：官方案例程序[Example_from_FEniCS_website]、超弹性体拉伸python程序[hyperelastic]、各种水凝胶溶胀python程序[standard_gel_swelling_program]
 
-## 1.参考
+## 参考
 
-以下安装教程参考FEniCS官网安装教程（https://fenicsproject.org/download/）（https://fenics.readthedocs.io/en/latest/installation.html#debian-ubuntu-packages），以及CSDN博客（https://blog.csdn.net/qq_40492373/article/details/105207726）（作者：仰望天空的蚂蚁）
+以下安装教程参考FEniCS官网安装教程
 
-## 2.安装过程（此教程适用于Linux 以及 MacOS）
+（https://fenicsproject.org/download/）
+
+（https://fenics.readthedocs.io/en/latest/installation.html#debian-ubuntu-packages）
+
+以及CSDN博客：
+
+（https://blog.csdn.net/qq_40492373/article/details/105207726）（作者：仰望天空的蚂蚁）
+
+# 安装过程（此教程适用于Linux 以及 MacOS）
 
 FEniCS可以安装在普通账户下,也可以安装在root账户下。加 * 项为必选操作，其他为可选操作。
 
-（1）创建root账户
+## 1.创建root账户
 
 Ubuntu首次为root账户设置密码
 
@@ -26,7 +34,9 @@ sudo passwd root
 
 跟随指令输入当前账户的密码，并设置root账户的密码，接着输入su，进入root账户下。
 
-(2) 更换源为国内镜像站的源，这里推荐清华源、中科大源以及阿里源。以Ubuntu为例首先备份/etc/apt/sources.list文件
+## 2.更换源为国内镜像站的源
+
+这里推荐清华源、中科大源以及阿里源。以Ubuntu为例首先备份/etc/apt/sources.list文件
 
 ```
 mv /etc/apt/sources.list /etc/apt/sourses.list.backup
