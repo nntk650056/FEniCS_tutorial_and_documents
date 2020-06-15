@@ -14,7 +14,7 @@
 
 （https://fenicsproject.org/download/）
 
-（https://fenics.readthedocs.io/en/latest/installation.html#debian-ubuntu-packages）
+（https://fenics.readthedocs.io/en/latest/installation.html#）
 
 以及CSDN博客：
 
